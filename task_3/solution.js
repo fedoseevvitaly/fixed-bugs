@@ -5,34 +5,34 @@ function renderCartItem(item) {
 
     // product - объект вида {id: id, title: title, count: count, price: price}
     // например, {id: 1, title: 'Пицца', count: 5, price: '500.00'}, где
-    // id - идентификатор
-    // title - наименование
+     //const id - идентификатор
+    //const title - наименование
     // price - цена
     // count - количество
-    product = {id: id, title: title, count: count, price: price};
+      //product = {id: id, title: title, count: count, price: price};
     // сформируйте строку itemCountText вида:
     // количество × цена ₽ = стоимость ₽
-    itemCountText == 5 * 500.00`₽`== 2500 `₽`;
+    //itemCountText == 5 * 500.00`₽`== 2500 `₽`;
     // например,
     // 5 × 500.00 ₽ = 2500 ₽
-
-    //5 * 500.00 `₽` = 2500 `₽` 
+    
     // 1. Создайте переменную itemCountText, равную пустой строке
-    let itemCountText = {};
+    let itemCountText = ``;
+    
     // 2. Присвойте переменной itemCountText результат склеивания itemCountText и количества
-    itemCountText = itemCountText + count;
+    itemCountText += product.count;
     // 3. Присвойте переменной itemCountText результат склеивания itemCountText и ` × `
-    itemCountText = itemCountText + `x`;
+    itemCountText += ` × ` ;
     // 4. Присвойте переменной itemCountText результат склеивания itemCountText и цены
-    itemCountText = itemCountText + price; 
+    itemCountText += product.price; 
     // 5. Присвойте переменной itemCountText результат склеивания itemCountText и ` ₽ = `
-    itemCountText = itemCountText + ` ₽ = `;
+    itemCountText += ` ₽ = ` ;
     // 6. Создайте переменную sum и присвойте ей значение произведения количества и цены
-    let sum = count + price;
+    let sum = product.count * product.price;
     // 7. Присвойте переменной itemCountText результат склеивания itemCountText и sum
     itemCountText = itemCountText + sum;
     // 8. Присвойте переменной itemCountText результат склеивания itemCountText и ` ₽`
-    itemCountText = itemCountText + ` ₽`;
+    itemCountText += ` ₽`;
     //console.log(itemCountText);
     // Конец решения задания №3.1.
 
